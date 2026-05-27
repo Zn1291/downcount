@@ -1,0 +1,38 @@
+body{
+    display: flex; /**ativa o flexbox*/
+    flex-direction: column; /**organiza os itens em coluna*/
+    justify-content: center; /**centraliza horizontalmente*/
+    align-items: center; /**centraliza verticalmente*/
+
+    height: 100vh; /**defina que o body terá 100% da altura da tela*/
+    margin: 0; /**remove a margem padrão do body*/
+}
+
+.gif {
+    width: 200px; /**define a largura da imagem*/
+    object-fit: contain; /**garante que a imagem mantenha suas proporções*/
+}
+
+button{
+    padding: 10px 20px; /**adiciona espaçamento interno ao botão*/
+    font-size: 16px; /**define o tamanho da fonte do texto do botão*/
+    color: white;
+    background-color: #007BFF;
+    cursor: pointer; /**altera o cursor para indicar que o elemento é clicável*/
+}
+
+#nao{
+    position: relative; /**define a posição como relativa para permitir o uso de top e left*/
+}
+
+#contador{
+    font-size: 70px; /**define o tamanho da fonte do contador*/
+    font-weight: bold; /**deixa o texto em negrito*/
+    margin-top: 30px; /**adiciona uma margem superior para separar do título*/
+    font-family: monospace; /**define a fonte como monoespaçada para um visual mais digital*/
+    background-color: black; /**adiciona um fundo claro para destacar o contador*/
+    color: #00ff88;
+    padding: 20px 40px; /**adiciona espaçamento interno ao contador*/
+    border-radius: 15px; /**adiciona bordas arredondadas ao contador*/
+    box-shadow: 0 0 20px #00ff88; /**adiciona um efeito de brilho ao contador*/
+}
