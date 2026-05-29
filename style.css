@@ -3,22 +3,28 @@ body{
     flex-direction: column; /**organiza os itens em coluna*/
     justify-content: center; /**centraliza horizontalmente*/
     align-items: center; /**centraliza verticalmente*/
-
-    height: 100vh; /**defina que o body terá 100% da altura da tela*/
+    padding: 20px; /**adiciona um espaçamento interno ao body*/
+    min-height: 100vh; /**garante que o body ocupe toda a altura da tela*/
     margin: 0; /**remove a margem padrão do body*/
 }
 
 .gif {
-    width: 200px; /**define a largura da imagem*/
+    width: 80%; /**define a largura da imagem*/
+    max-width: 400px; /**define a largura máxima da imagem para evitar que fique muito grande em telas maiores*/
+    height: auto; /**ajusta a altura automaticamente para manter as proporções da imagem*/
     object-fit: contain; /**garante que a imagem mantenha suas proporções*/
 }
 
-button{
+button:hover{
+    transform: scale(1.05); /**aumenta o tamanho do botão em 5% quando o mouse estiver sobre ele*/
+    border: none; /**remove a borda padrão do botão*/
+    border-radius: 10px; /**adiciona bordas arredondadas ao botão*/
     padding: 10px 20px; /**adiciona espaçamento interno ao botão*/
     font-size: 16px; /**define o tamanho da fonte do texto do botão*/
     color: white;
     background-color: #007BFF;
     cursor: pointer; /**altera o cursor para indicar que o elemento é clicável*/
+    transition: 0.2s; /**adiciona uma transição suave para as mudanças de estilo*/
 }
 
 #nao{
@@ -26,7 +32,7 @@ button{
 }
 
 #contador{
-    font-size: 70px; /**define o tamanho da fonte do contador*/
+    font-size: clamp(32px, 8vw, 70px); /**define o tamanho da fonte usando clamp para ser responsivo, com um mínimo de 32px, um máximo de 70px e um valor intermediário baseado na largura da viewport (8vw)*/
     font-weight: bold; /**deixa o texto em negrito*/
     margin-top: 30px; /**adiciona uma margem superior para separar do título*/
     font-family: monospace; /**define a fonte como monoespaçada para um visual mais digital*/
